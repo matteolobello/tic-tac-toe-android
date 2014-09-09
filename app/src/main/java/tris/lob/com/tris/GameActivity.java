@@ -678,6 +678,8 @@ public class GameActivity extends Activity {
         sette.setClickable(true);
         otto.setClickable(true);
         nove.setClickable(true);
+        xwins = 0;
+        owins = 0;
     }
 
 }
