@@ -6,4 +6,13 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_game">GameActivity</string>
 
+     <string name="youlost">You lost!</string>
+     <string name="youwon">You won!</string>
+     <string name="keepplaying">Keep playing</string>
+     <string name="stopplaying">Stop playing</string>
+     <string name="draw">Draw!</string>
+     <string name="goodjob">Good job!</string>
+     <string name="youlostthematch">You lost the match!</string>
+     <string name="youwonthematch">You won the match!</string>
+
 </resources>

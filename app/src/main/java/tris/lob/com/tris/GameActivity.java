@@ -17,79 +17,77 @@ import java.util.Random;
 
 public class GameActivity extends Activity {
 
-    static GameActivity game;
+    private boolean unobooleanox = false,
+                    duebooleanox = false,
+                    trebooleanox = false,
+                    quattrobooleanox = false,
+                    cinquebooleanox = false,
+                    seibooleanox = false,
+                    settebooleanox = false,
+                    ottobooleanox = false,
+                    novebooleanox =false,
+                    unobooleanoy = false,
+                    duebooleanoy = false,
+                    trebooleanoy = false,
+                    quattrobooleanoy = false,
+                    cinquebooleanoy = false,
+                    seibooleanoy = false,
+                    settebooleanoy = false,
+                    ottobooleanoy = false,
+                    novebooleanoy = false;
 
-    static boolean unobooleanox = false,
-                   duebooleanox = false,
-                   trebooleanox = false,
-                   quattrobooleanox = false,
-                   cinquebooleanox = false,
-                   seibooleanox = false,
-                   settebooleanox = false,
-                   ottobooleanox = false,
-                   novebooleanox =false,
-                   unobooleanoy = false,
-                   duebooleanoy = false,
-                   trebooleanoy = false,
-                   quattrobooleanoy = false,
-                   cinquebooleanoy = false,
-                   seibooleanoy = false,
-                   settebooleanoy = false,
-                   ottobooleanoy = false,
-                   novebooleanoy = false;
+    private Button uno,
+                   due,
+                   tre,
+                   quattro,
+                   cinque,
+                   sei,
+                   sette,
+                   otto,
+                   nove;
 
-    static Button uno,
-                  due,
-                  tre,
-                  quattro,
-                  cinque,
-                  sei,
-                  sette,
-                  otto,
-                  nove;
+    private TextView turn,
+                     xcounter,
+                     ocounter;
 
-    static TextView turn,
-                    xcounter,
-                    ocounter;
+    private int xo = 0;
 
-    static int xo = 0;
+    private int x1 = 1,
+                x2 = 3,
+                x3 = 5,
+                x4 = 7,
+                x5 = 9,
+                x6 = 11,
+                x7 = 13,
+                x8 = 15,
+                x9 = 17,
+                x10 = 19;
 
-    static int x1 = 1,
-               x2 = 3,
-               x3 = 5,
-               x4 = 7,
-               x5 = 9,
-               x6 = 11,
-               x7 = 13,
-               x8 = 15,
-               x9 = 17,
-               x10 = 19;
+    private int y1 = 2,
+                y2 = 4,
+                y3 = 6,
+                y4 = 8,
+                y5 = 10,
+                y6 = 12,
+                y7 = 14,
+                y8 = 16,
+                y9 = 18,
+                y10 = 20;
 
-    static int y1 = 2,
-               y2 = 4,
-               y3 = 6,
-               y4 = 8,
-               y5 = 10,
-               y6 = 12,
-               y7 = 14,
-               y8 = 16,
-               y9 = 18,
-               y10 = 20;
+    private int xwins = 0,
+                owins = 0;
 
-    static int xwins = 0,
-               owins = 0;
+    private String youlost;
+    private String youwon;
+    private String keepplaying;
+    private String stopplaying;
+    private String draw;
+    private String goodjob;
+    private String youlostthematch;
+    private String youwonthematch;
+    private String ohno = "Oh no!";
 
-    static String youlost;
-    static String youwon;
-    static String keepplaying;
-    static String stopplaying;
-    static String draw;
-    static String goodjob;
-    static String youlostthematch;
-    static String youwonthematch;
-    static String ohno = "Oh no!";
-
-    /*static int firstPlay() {
+    /*private int firstPlay() {
      *   int min = 1; int max = 2;
      *
      *   Random r = new Random();
@@ -97,7 +95,7 @@ public class GameActivity extends Activity {
      *   return randomplayer;
      * }
      *
-     *static boolean firstXTurn() {
+     *private boolean firstXTurn() {
      *   if (game.firstPlay() == 1) {
      *       return true;
      *   } else {
@@ -126,25 +124,15 @@ public class GameActivity extends Activity {
         xcounter = (TextView)findViewById(R.id.textView6);
         ocounter = (TextView)findViewById(R.id.textView7);
 
-        if (Locale.getDefault().getLanguage().equals("it")) {
-            youlost = "Hai Perso!";
-            youwon = "Hai Vinto!";
-            keepplaying = "Continua a giocare";
-            stopplaying = "Forse dopo...";
-            draw = "Pareggio";
-            goodjob = "Bravo!";
-            youlostthematch = "Hai perso la partita";
-            youwonthematch = "Hai vinto la partita!";
-        } else {
-            youlost = "You lost!";
-            youwon = "You won!";
-            keepplaying = "Keep playing";
-            stopplaying = "Maybe later...";
-            draw = "Draw";
-            goodjob = "Good Job!";
-            youlostthematch = "You lost the match";
-            youwonthematch = "You won the match!";
-        }
+
+        youlost = getString(R.string.youlost);
+        youwon = getString(R.string.youwon);
+        keepplaying = getString(R.string.keepplaying);
+        stopplaying = getString(R.string.stopplaying);
+        draw = getString(R.string.draw);
+        goodjob = getString(R.string.goodjob);
+        youlostthematch = getString(R.string.youlostthematch);
+        youwonthematch = getString(R.string.youwonthematch);
 
         uno.setOnClickListener(new View.OnClickListener() {
             @Override
